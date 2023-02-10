@@ -15,7 +15,7 @@ public class Employee {
     private Employee(String surname) {
         this(0, surname, 0, 0, null);
     }
-    private int id;
+    int id;
     String surname;
     public int age;
     private double salary;
@@ -31,8 +31,8 @@ public class Employee {
     public void method2() {
         System.out.println(id + " " + salary);
     }
-    public void method3() {
-        System.out.println(id + surname + salary);
+    public int method3() {
+        return id;
     }
 }
 class EmployeeTest {
