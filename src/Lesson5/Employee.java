@@ -15,9 +15,9 @@ public class Employee {
     private Employee(String surname) {
         this(0, surname, 0, 0, null);
     }
-    int id;
+    private int id;
     String surname;
-    int age;
+    public int age;
     private double salary;
     String department;
      double salaryX2() {
@@ -25,14 +25,14 @@ public class Employee {
         return salary;
     }
     public void method1() {
-         System.out.println(id + " " + salary);
+         System.out.println(id + " " + age);
     }
 
     public void method2() {
         System.out.println(id + " " + salary);
     }
     public void method3() {
-        System.out.println(id + " " + salary);
+        System.out.println(id + surname + salary);
     }
 }
 class EmployeeTest {
@@ -41,7 +41,7 @@ class EmployeeTest {
         Employee rab2 = new Employee(2, "Ivanov", 27, 2790.50, "Sklad");
         rab1.salaryX2();
         rab2.salaryX2();
-        System.out.println("Новая зарплата работника " + rab1.surname + " " + rab1.salary);
-        System.out.println("Новая зарплата работника " + rab2.surname + " " + rab2.salary);
+//        System.out.println("Новая зарплата работника " + rab1.surname + " " + rab1.salary);
+//        System.out.println("Новая зарплата работника " + rab2.surname + " " + rab2.salary);
     }
 }
