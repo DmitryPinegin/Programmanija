@@ -15,7 +15,7 @@ class CarTest {
     public static void changingTheNumberOfDoors(Car car, int quantity) {
         car.numberOfDoors = quantity;
     }
-    void colorReplacement(Car car1, Car car2) {
+    static void colorReplacement(Car car1, Car car2) {
         Car car3 = new Car("Black", "V6", 3);
         car3.color = car1.color;
         car1.color = car2.color;
@@ -30,6 +30,13 @@ class CarTest {
 
         changingTheNumberOfDoors(car,5);
         System.out.println("Количество дверей после замены : " + car.numberOfDoors);
+        Car car1 = new Car("Red", "V6", 5);
+        Car car2 = new Car("Blue", "V8", 3);
+        System.out.println("Цвет машины №1 изначальный : " + car1.color);
+        System.out.println("Цвет машины №2 изначальный : " + car2.color);
+        colorReplacement(car1, car2);
+        System.out.println("Цвет машины №1 после покраски : " + car1.color);
+        System.out.println("Цвет машины №2 после покраски : " + car2.color);
 
     }
 }
