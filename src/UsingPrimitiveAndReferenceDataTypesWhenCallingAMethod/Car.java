@@ -3,7 +3,7 @@ package UsingPrimitiveAndReferenceDataTypesWhenCallingAMethod;
 public class Car {
     String color;
     String engine;
-    public int numberOfDoors;
+    public static int numberOfDoors;
     Car(String color, String engine, int numberOfDoors) {
         this.color = color;
         this.engine = engine;
@@ -24,6 +24,12 @@ class CarTest {
 
     public static void main(String[] args) {
         Car car = new Car("Black", "V4", 3);
-        car.
+        System.out.println("Цвет машины : " + car.color);
+        System.out.println("Мотор : " + car.engine);
+        System.out.println("Количество дверей : " + car.numberOfDoors);
+
+        changingTheNumberOfDoors(car,5);
+        System.out.println("Количество дверей после замены : " + car.numberOfDoors);
+
     }
 }
