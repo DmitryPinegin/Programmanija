@@ -19,6 +19,6 @@ public class Class1 {
 
     public static void main(String[] args) {
         Class1 clas = new Class1();
-        clas.abc("sss", "gggg", "eeeee", "dddd", "pppp");
+        clas.abc("sss", "gggg", "eeeee", "dddd", "pppp", "dddd");
     }
 }
