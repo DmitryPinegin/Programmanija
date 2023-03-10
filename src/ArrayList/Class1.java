@@ -1,12 +1,24 @@
 package ArrayList;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 
 public class Class1 {
-    void abc(String...text) {
+    public ArrayList<String> abc(String...text) {
         ArrayList<String> array1 = new ArrayList<>();
-        array1.add(Arrays.toString(text));
-        Arrays.sort(new ArrayList[]{array1});
+
+        for (String s : text) {
+            if(!array1.contains(s)) {
+                array1.add(s);
+            }
+        }
+        Collections.sort(array1);
+        System.out.println(array1);
+        return array1;
+    }
+
+    public static void main(String[] args) {
+        Class1 clas = new Class1();
+        clas.abc("sss", "gggg", "eeeee", "dddd", "pppp");
     }
 }
