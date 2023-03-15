@@ -8,7 +8,9 @@ public class Student {
         return sb;
     }
     public void setName(StringBuilder sb) {
-        name = sb;
+        if (sb.length() > 3) {
+            name = sb;
+        }
     }
     private int course;
     public int getCourse() {
@@ -24,7 +26,14 @@ public class Student {
         return grade;
     }
     public void setGrade(int i) {
-        grade = i;
+        if(i > 0 && i < 11) {
+            grade = i;
+        }
+    }
+    public void showInfo(Student student) {
+        System.out.println(student.getName());
+        System.out.println(student.getCourse());
+        System.out.println(student.getGrade());
     }
 
 
