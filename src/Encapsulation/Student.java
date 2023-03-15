@@ -8,7 +8,7 @@ public class Student {
         return sb;
     }
     public void setName(StringBuilder sb) {
-        if (sb.length() > 3) {
+        if (sb.length() > 2) {
             name = sb;
         }
     }
@@ -31,9 +31,9 @@ public class Student {
         }
     }
     public static void showInfo(Student student) {
-        System.out.println(student.getName());
-        System.out.println(student.getCourse());
-        System.out.println(student.getGrade());
+        System.out.println("Имя студента : " + student.getName());
+        System.out.println("Курс : " + student.getCourse());
+        System.out.println("Оценка : " + student.getGrade());
     }
 
 
