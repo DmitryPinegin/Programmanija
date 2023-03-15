@@ -30,7 +30,7 @@ public class Student {
             grade = i;
         }
     }
-    public void showInfo(Student student) {
+    public static void showInfo(Student student) {
         System.out.println(student.getName());
         System.out.println(student.getCourse());
         System.out.println(student.getGrade());
