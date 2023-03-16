@@ -8,15 +8,15 @@ public class Y extends X {
         Y y = new Y();
         y.abc();
     }
-    public void ghi() {
-        X x = new Y();
-        x.abc();
-    }
+//    public void ghi() {
+//        X x = new Y();
+//        x.abc();
+//    }
 
     public static void main(String[] args) {
         Y a = new Y();
         a.abc();
         a.def();
-        a.ghi();
+//        a.ghi();
     }
 }
