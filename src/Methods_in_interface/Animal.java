@@ -18,6 +18,7 @@ public abstract class Animal {
 abstract class Fish extends Animal {
     Fish(String name) {
         super(name);
+        this.name = name;
     }
     public void sleep() {
         System.out.println("Vsegda interesno nabludat, kak spjat ribi");
@@ -27,6 +28,7 @@ abstract class Fish extends Animal {
 abstract class Bird extends Animal implements Speakable {
     Bird(String name) {
         super(name);
+        this.name = name;
     }
     abstract void fly();
 
@@ -38,6 +40,7 @@ abstract class Bird extends Animal implements Speakable {
 abstract class Mammal extends Animal implements Speakable {
     Mammal(String name) {
         super(name);
+        this.name = name;
     }
     abstract void run();
 }
@@ -49,6 +52,7 @@ interface Speakable {
 class Mechenosec extends Fish {
     Mechenosec(String name) {
         super(name);
+        this.name = name;
     }
     public void swim() {
         System.out.println("Mechenosec krasivaja riba, kotoraja bistro plavaet!");
@@ -61,6 +65,7 @@ class Mechenosec extends Fish {
 class Pingvin extends Bird {
     Pingvin(String name) {
         super(name);
+        this.name = name;
     }
     public void eat() {
         System.out.println("Pingvin lubit est ribu!");
@@ -79,6 +84,7 @@ class Pingvin extends Bird {
 class Lev extends Mammal {
     Lev(String name) {
         super(name);
+        this.name = name;
     }
     public void eat() {
         System.out.println("Lev, kak lyuboi hishnik, lyubit mjaso!");
