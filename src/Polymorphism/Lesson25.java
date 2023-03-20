@@ -2,22 +2,29 @@ package Polymorphism;
 
 public class Lesson25 {
     public static void main(String[] args) {
-        Mechenosec mech = new Mechenosec("Mech");
-        mech.swim();
-        mech.eat();
-        mech.sleep();
-        Speakable pingvi = new Pingvin("Pingvi");
-        pingvi.speak();
-        Animal lev = new Lev("Lev");
-        System.out.println(lev.getName());
-        lev.eat();
-        lev.sleep();
-        Mammal mammal = new Lev("Mama");
-        System.out.println(mammal.getName());
-        mammal.run();
-        mammal.eat();
-        mammal.sleep();
-        mammal.speak();
+        Mechenosec m = new Mechenosec("M");
+        Pingvin p = new Pingvin("P");
+        Lev l = new Lev("L");
+        Mammal ma = new Lev("La");
+        Bird b = new Pingvin("B");
+        Fish f = new Mechenosec("Me");
+        Speakable s = new Pingvin("Sp");
+        Speakable s1 = new Lev("L1");
+
+
+     Speakable[] speakables = new Speakable[] {p, l, ma, b, s, s1};
+     Animal[] animals = new Animal[] {m, p, l, ma, b, f, (Animal)s, (Animal)s1};
+     for (Speakable s3: speakables) {
+         if(s3 instanceof Lev){
+             s3.speak();
+             ((Animal) s3).eat();
+             ((Animal) s3).getName();
+             ((Animal) s3).sleep();
+             ((Lev) s3).run();
+             s3.speak();
+         }
+     }
+
     }
 }
 abstract class Animal {
