@@ -14,8 +14,8 @@ public class Lesson25 {
 
      Speakable[] speakables = new Speakable[] {p, l, ma, b, s, s1};
      Animal[] animals = new Animal[] {m, p, l, ma, b, f, (Animal)s, (Animal)s1};
-     for (Speakable s3: speakables) {
-         if(s3 instanceof Lev){
+     for (Speakable s3 : speakables) {
+         if (s3 instanceof Lev) {
              s3.speak();
              ((Animal) s3).eat();
              ((Animal) s3).getName();
@@ -23,6 +23,15 @@ public class Lesson25 {
              ((Lev) s3).run();
              s3.speak();
          }
+     }
+     for (Animal a : animals) {
+        if (a instanceof Pingvin) {
+            a.eat();
+            a.getName();
+            ((Pingvin) a).fly();
+            a.sleep();
+            ((Pingvin) a).speak();
+        }
      }
 
     }
