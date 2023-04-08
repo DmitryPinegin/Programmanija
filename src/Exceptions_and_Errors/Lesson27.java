@@ -9,11 +9,11 @@ public class Lesson27 {
             try {
                 tigr.drink("pivo");
             } catch (NeVodaExeption e) {
-
-            }catch (Exception e) {
                 System.out.println(e.getMessage());
-            }
-            finally {
+
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            } finally {
                 System.out.println("Eto inner finally block");
             }
         } catch (RuntimeException e) {
@@ -25,16 +25,19 @@ public class Lesson27 {
     }
 
 }
+
 class NeMjasoExeption extends RuntimeException {
-    NeMjasoExeption (String s) {
+    NeMjasoExeption(String s) {
         super(s);
     }
 }
+
 class NeVodaExeption extends Exception {
-    NeVodaExeption (String s) {
+    NeVodaExeption(String s) {
         super(s);
     }
 }
+
 class Tiger {
     void eat(String s) {
         if (s.equals("mjaso")) {
@@ -44,12 +47,13 @@ class Tiger {
         }
 
     }
+
     void drink(String s) throws NeVodaExeption {
-            if (s.equals("voda")) {
-                System.out.println("Tigr pjet vodu");
-            } else {
-                    throw new NeVodaExeption("Tigr ne pjet " + s);
-                }
+        if (s.equals("voda")) {
+            System.out.println("Tigr pjet vodu");
+        } else {
+            throw new NeVodaExeption("Tigr ne pjet " + s);
+        }
 
     }
 
