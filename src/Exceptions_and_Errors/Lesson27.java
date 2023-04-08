@@ -22,5 +22,14 @@ class Tiger {
         }
 
     }
+    void drink(String s) {
+        try {
+            s.equals("voda");
+            System.out.println("Tigr pjet vodu");
+        }
+        catch (Exception e){
+            System.out.println("Tigr ne pjet " + s);
+        }
+    }
 
 }
