@@ -13,3 +13,14 @@ class NeVodaExeption extends Exception {
         super(s);
     }
 }
+class Tiger {
+    void eat(String s) {
+        if (s.equals("mjaso")) {
+            System.out.println("Tigr est mjaso");
+        } else {
+            throw new NeMjasoExeption("Tigr ne est " + s);
+        }
+
+    }
+
+}
