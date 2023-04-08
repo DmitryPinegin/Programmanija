@@ -13,6 +13,14 @@ public class Lesson27 {
             }catch (Exception e) {
                 System.out.println(e.getMessage());
             }
+            finally {
+                System.out.println("Eto inner finally block");
+            }
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 
