@@ -8,3 +8,8 @@ class NeMjasoExeption extends RuntimeException {
         super(s);
     }
 }
+class NeVodaExeption extends Exception {
+    NeVodaExeption (String s) {
+        super(s);
+    }
+}
